@@ -30,12 +30,7 @@ public class StudentService {
         String email = student.getEmail();
         boolean b = studentRepository.existsStudentByEmail(email);
         if (!b) {
-            Student student1 = new Student(
-                    student.getName(),
-                    email,
-                    student.getGender()
-            );
-            studentRepository.save(student1);
+            studentRepository.save(student);
         }
         else {
             throw new BadRequestException(String.format("Email %s already exists", email));
