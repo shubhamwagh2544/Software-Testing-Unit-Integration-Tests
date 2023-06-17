@@ -31,10 +31,10 @@ public class StudentRepositoryTest {
         underTest.save(student);
 
         //When
-        boolean expected = underTest.existsStudentByEmail(email);
+        boolean actual = underTest.existsStudentByEmail(email);
 
         //Then
-        assertThat(expected).isTrue();
+        assertThat(actual).isTrue();
     }
 
     @Test
@@ -43,10 +43,10 @@ public class StudentRepositoryTest {
         String email = "shubhamwagh@gmail.com";
 
         //When
-        boolean expected = underTest.existsStudentByEmail(email);       //not saving to DB
+        boolean actual = underTest.existsStudentByEmail(email);       //not saving to DB
 
         //Then
-        assertThat(expected).isFalse();
+        assertThat(actual).isFalse();
     }
 
 }
