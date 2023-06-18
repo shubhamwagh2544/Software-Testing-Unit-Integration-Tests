@@ -134,6 +134,7 @@ class StudentServiceTest {
 
         //Then
         assertThat(studentRepository.existsById(id)).isFalse();
+        //verify(studentRepository).deleteById(id);
     }
 
     @Test
